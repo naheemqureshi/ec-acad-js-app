@@ -26,6 +26,7 @@ Deploys the application as a container based on the image stored in ECR using th
 
 
 ### **Pipeline Stages:**
+
 **Declarative Checkout SCM**: Checks out src from repo
 
 **Declarative Tool Install**:Install build tools (Maven/Node) required as part of the 'Build & Unit Test' stage
