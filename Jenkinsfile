@@ -7,7 +7,7 @@ pipeline {
      SERVICE_NAME="ec-acad-ecs-srv02"
      TASK_DEFINITION_NAME="ec-acad-task-def02"
      DESIRED_COUNT="1"
-     IMAGE_REPO_NAME="ec-acad-01-java-app"
+     IMAGE_REPO_NAME="ec-acad-01-node-app"
      IMAGE_TAG="${env.BUILD_ID}"
      REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
      registryCredentialDev = 'ec-acad-dev-credentials'
