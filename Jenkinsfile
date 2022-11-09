@@ -68,9 +68,7 @@ pipeline {
     stage('Archive Artifacts') {
         archiveArtifacts "my-artifacts-pattern/*"
                 }
-        }
-      }
-    }	    
+    
          //Deploying Image to Dev ECS
      stage('Deploy to Dev') {
      steps{
