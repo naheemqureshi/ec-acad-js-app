@@ -63,13 +63,6 @@ pipeline {
         }
       }
     }
-    
-    // Archive Artifacts
-    stage('Archive Artifacts') {
-      steps{
-        archiveArtifacts "target/*.jar, target/*.war"
-          }
-        }
 	    
          //Deploying Image to Dev ECS
      stage('Deploy to Dev') {
