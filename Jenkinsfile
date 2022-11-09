@@ -67,7 +67,7 @@ pipeline {
     // Archive Artifacts
     stage('Archive Artifacts') {
       steps{
-        archiveArtifacts "my-artifacts-pattern/*"
+        archiveArtifacts "/*"
           }
         }
 	    
