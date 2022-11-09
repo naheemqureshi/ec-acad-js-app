@@ -66,7 +66,7 @@ pipeline {
      //Deploy
      stage('Deploy') {
      steps{
-            withAWS(credentials: registryCredential, region: "${AWS_DEFAULT_REGION}") {
+            withAWS(credentials: registryCredentialDev, region: "${AWS_DEFAULT_REGION}") {
                 script {
 			sh "chmod +x ./script.sh"
 			sh './script.sh'
