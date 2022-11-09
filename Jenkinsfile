@@ -3,11 +3,11 @@ pipeline {
      //environment settings for ECR & ECS deploy script//
      AWS_ACCOUNT_ID="447151167969"
      AWS_DEFAULT_REGION="eu-west-2" 
-     CLUSTER_NAME="academy-ecs-cl"
-     SERVICE_NAME="ec-acad-ecs-srv02"
-     TASK_DEFINITION_NAME="ec-acad-task-def02"
+     CLUSTER_NAME="ec-acad-ecs-cl10"
+     SERVICE_NAME="ec-acad-service-fe10"
+     TASK_DEFINITION_NAME="ec-acad-taskdef-fe10"
      DESIRED_COUNT="1"
-     IMAGE_REPO_NAME="ec-acad-01-node-app"
+     IMAGE_REPO_NAME="ec-acad-fe-app10"
      IMAGE_TAG="${env.BUILD_ID}"
      REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
      registryCredentialDev = 'ec-acad-dev-credentials'
