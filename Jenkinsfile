@@ -44,7 +44,7 @@ pipeline {
     stage('Push image to AWS ECR') {
         steps{
             script{
-		    docker.withRegistry("https://" + REPOSITORY_URI, "ecr:eu-west-2:" + registryCredential) {
+		    docker.withRegistry("https://" + REPOSITORY_URI, "ecr:eu-west-2:" + registryCredentialDev) {
                     dockerImage.push()
                 }
             }
@@ -63,17 +63,6 @@ pipeline {
         }
       }
     }
-     //Deploy
-     stage('Deploy') {
-     steps{
-            withAWS(credentials: registryCredentialDev, region: "${AWS_DEFAULT_REGION}") {
-                script {
-			sh "chmod +x ./script.sh"
-			sh './script.sh'
-                }
-            } 
-        }
-      } 
 	    
          //Deploying Image to Dev ECS
      stage('Deploy to Dev') {
